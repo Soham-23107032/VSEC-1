@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Hello!</h1>
+        <p>This is a random HTML page.</p>
+        <button onclick="changeText()">Click me</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function changeText() {
+            const messages = [
+                "You clicked the button!",
+                "Hello from JavaScript!",
+                "Have a great day!",
+                "Random message activated!"
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerText = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
